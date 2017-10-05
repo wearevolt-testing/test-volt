@@ -9,6 +9,10 @@ Bundler.require(*Rails.groups)
 module TestVolt
   class Application < Rails::Application
 
+    config.time_zone = 'Europe/Moscow'
+
+    config.i18n.default_locale = :ru
+
     config.generators do |g|
       g.test_framework :rspec,
         fixtures: true,
