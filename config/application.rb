@@ -18,6 +18,8 @@ module TestVolt
         controller_specs: false,
         request_specs: false
       g.fixture_replacement :factory_girl, dir: "spec/factories"
+      g.stylesheets          false
+      g.javascripts          false
     end
 
     # Initialize configuration defaults for originally generated Rails version.

@@ -1,0 +1,156 @@
+require: rubocop-rspec
+
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+    - bin/*
+    - db/schema.rb
+    - config/**/*
+    - db/migrate/*
+    - db/seeds.rb
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/LineLength:
+  Max: 100
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'config/**/*.rb'
+
+Metrics/AbcSize:
+  Max: 20
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/MethodLength:
+  Max: 15
+  Enabled: false
+  Exclude:
+    - 'spec/**/*.rb'
+
+
+Style/Documentation:
+  Include:
+    - 'app/**/*.rb'
+  Exclude:
+    - 'app/controllers/**/*.rb'
+    - 'app/decorators/**/*.rb'
+    - 'app/helpers/**/*.rb'
+    - 'app/mailers/**/*.rb'
+    - 'app/policies/**/*.rb'
+    - 'app/serializers/**/*.rb'
+    - 'app/views/**/*.rb'
+    - 'spec/**/*.rb'
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'app/controllers/**/*.rb'
+    - 'app/decorators/**/*.rb'
+    - 'app/serializers/**/*.rb'
+    - 'app/policies/**/*.rb'
+
+Style/BarePercentLiterals:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
+
+Style/PerlBackrefs:
+  Enabled: false
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MultilineBlockLayout:
+  Exclude:
+    - 'spec/**/*'
+
+Style/MultilineTernaryOperator:
+  Enabled: false
+
+Style/BlockEndNewline:
+  Exclude:
+    - 'spec/**/*'
+
+Style/PredicateName:
+  Exclude:
+    - 'app/decorators/**/*.rb'
+
+Style/MultilineBlockLayout:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/WordArray:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/Semicolon:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/Proc:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+RSpec/InstanceVariable:
+  Exclude:
+    - 'spec/shared_contexts/**/*.rb'
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/features/**/*.rb'
+
+RSpec/ExampleLength:
+  Max: 10
+  Exclude:
+    - 'spec/features/**/*.rb'
+
+RSpec/NestedGroups:
+  Max: 5
+
+Rails/FilePath:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+Lint/EnsureReturn:
+  Enabled: false
