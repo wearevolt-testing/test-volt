@@ -10,8 +10,7 @@ test:
 
 production:
   adapter:  postgresql
-  host:     localhost
   encoding: unicode
   database: test-volt_production
+  username: test-volt
   pool:     5
-  template: template0
