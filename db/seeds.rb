@@ -7,3 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
+
+10.times do |i|
+  post = user.posts.create! title: Faker::StarWars.character, body: Faker::StarWars.quote
+  puts "CREATED POSTS: #{i.next}" if post.valid?
+end
