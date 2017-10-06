@@ -14,8 +14,8 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring', require: false
+  gem 'spring-watcher-listen', '~> 2.0.0', require: false
   gem 'web-console', '>= 3.3.0'
 end
 gem 'bootstrap', '~> 4.0.0.alpha6'
@@ -29,7 +29,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
-  gem 'rspec-rails'
+  gem 'pry-byebug'
 end
 
 group :test do
@@ -37,7 +37,6 @@ group :test do
   gem 'capybara-email'
   gem 'capybara-webkit'
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'launchy'
   gem 'rails-controller-testing'
@@ -47,9 +46,12 @@ end
 
 group :development do
   gem 'better_errors'
-  gem 'rails_layout'
-  gem 'spring-commands-rspec'
   gem 'pry-rails'
+  gem 'rails_layout'
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
+  gem 'spring-commands-rspec', require: false
+  gem 'guard', require: false
+  gem 'guard-spring', require: false
+  gem 'guard-rspec', require: false
 end
