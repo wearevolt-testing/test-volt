@@ -14,8 +14,8 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring', require: false
+  gem 'spring-watcher-listen', '~> 2.0.0', require: false
   gem 'web-console', '>= 3.3.0'
 end
 gem 'bootstrap', '~> 4.0.0.alpha6'
@@ -50,5 +50,8 @@ group :development do
   gem 'rails_layout'
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
-  gem 'spring-commands-rspec'
+  gem 'spring-commands-rspec', require: false
+  gem 'guard', require: false
+  gem 'guard-spring', require: false
+  gem 'guard-rspec', require: false
 end
