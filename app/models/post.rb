@@ -4,6 +4,4 @@ class Post < ApplicationRecord
   has_many :comments, as: 'commentable', dependent: :destroy
 
   validates :title, :body, presence: true
-
-  before_create :set_published_at
 end
