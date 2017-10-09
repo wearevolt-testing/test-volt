@@ -55,3 +55,5 @@ group :development do
   gem 'guard-spring', require: false
   gem 'guard-rspec', require: false
 end
+
+gem 'doorkeeper'
