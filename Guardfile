@@ -53,7 +53,7 @@ guard :rspec, cmd: "bundle exec spring rspec" do
   dsl.watch_spec_files_for(rails.views)
 
   watch(rails.controllers) { |m| rspec.spec.call("controllers/#{m[1]}_controller") }
-
+  watch(%r{^app/controllers/api/(.+)\.rb$}) { 'spec/api' }
   # Rails config changes
   watch(rails.spec_helper)     { rspec.spec_dir }
   watch(rails.routes)          { "#{rspec.spec_dir}/routing" }
