@@ -340,6 +340,7 @@ DEPENDENCIES
   rails (~> 5.1.4)
   rails-controller-testing
   rails_layout
+  responders
   rspec-rails
   rubocop
   rubocop-rspec

@@ -57,3 +57,4 @@ group :development do
 end
 
 gem 'doorkeeper'
+gem 'responders'
