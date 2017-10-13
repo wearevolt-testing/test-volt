@@ -17,6 +17,7 @@ module Api
       def index
         @posts = Post.paginate(paginate_params).order('published_at DESC')
         respond_with :api, :v1, @posts
+        # TODO: test for this action
       end
 
       private
