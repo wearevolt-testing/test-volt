@@ -1,9 +1,11 @@
+require "application_responder"
+
 module Api
   module V1
-    class BaseController < ApplicationController
-      skip_before_action :authenticate_user!
+    class BaseController < ActionController::API
       before_action :doorkeeper_authorize!
 
+      self.responder = ApplicationResponder
       respond_to :json
 
       protected
