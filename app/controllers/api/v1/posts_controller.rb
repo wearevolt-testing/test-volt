@@ -14,6 +14,11 @@ module Api
         respond_with :api, :v1, @post
       end
 
+      def index
+        @posts = Post.paginate(paginate_params).order('published_at DESC')
+        respond_with :api, :v1, @posts
+      end
+
       private
 
       def post_params
@@ -26,6 +31,13 @@ module Api
 
       def show404
         render json: { errors: [I18n.t('post.not_found')]}, status: :not_found
+      end
+
+      def paginate_params
+        {
+          page:     params[:page] || 1,
+          per_page: params[:per_page] || 30
+        }
       end
     end
   end
