@@ -6,6 +6,6 @@ module Published
   end
 
   def set_published_at
-    self.published_at = Time.zone.now
+    self.published_at = Time.zone.now unless published_at
   end
 end
