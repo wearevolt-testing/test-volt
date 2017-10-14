@@ -1,16 +1,11 @@
 require 'rails_helper'
 
 describe 'Posts API::V1 GET /show' do
-  let(:user) { create(:user) }
-  let(:post) { create(:post, author: user) }
+  let(:user)    { create(:user) }
+  let(:post)    { create(:post, author: user) }
   let(:post_id) { post.id }
-  let(:access_token) { create(:access_token, resource_owner_id: user.id).token }
 
-  let(:subject) do
-    get "/api/v1/posts/#{post_id}", as: :json, params: { access_token: access_token }
-  end
-
-  it_behaves_like 'authorization_doorkeeper'
+  let(:subject) { get "/api/v1/posts/#{post_id}", as: :json }
 
   it 'return json' do
     subject
