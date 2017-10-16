@@ -1,2 +1,8 @@
 <h3>User</h3>
+
+<img src="<%= @user.avatar.url %>" alt="">
+<h4> <%= @user.nickname %> </h4>
 <p>Email: <%= @user.email if @user.email %></p>
+
+<%= link_to "edit", edit_user_registration_path, class: "btn btn-primary" %>
+<%= link_to "exit", destroy_user_session_path, class: "btn btn-danger", method: :delete %>
