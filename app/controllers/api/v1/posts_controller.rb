@@ -1,6 +1,8 @@
 module Api
   module V1
     class PostsController < BaseController
+      skip_before_action :doorkeeper_authorize!, only: %i[show index]
+
       before_action :load_post, only: [:show]
 
       rescue_from ActiveRecord::RecordNotFound, with: :show404
