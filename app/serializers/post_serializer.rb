@@ -4,4 +4,8 @@ class PostSerializer < ActiveModel::Serializer
   def author_nickname
     object.author.nickname
   end
+  
+  def published_at
+    object.published_at.to_s
+  end
 end
