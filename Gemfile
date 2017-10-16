@@ -42,6 +42,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'rspec-json_expectations'
 end
 
 group :development do
@@ -55,3 +56,8 @@ group :development do
   gem 'guard-spring', require: false
   gem 'guard-rspec', require: false
 end
+
+gem 'doorkeeper'
+gem 'responders'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'will_paginate', '~> 3.1.0'
