@@ -62,5 +62,6 @@ gem 'responders'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'will_paginate', '~> 3.1.0'
 gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-i18n'
 gem 'mini_magick'
 gem 'fog', group: :production
