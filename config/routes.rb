@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :posts
+      namespace :reports do
+        post 'by_author' => 'reports#by_author'
+      end
     end
   end
 end
