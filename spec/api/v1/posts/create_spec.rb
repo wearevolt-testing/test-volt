@@ -26,7 +26,7 @@ describe 'Posts API::V1 POST /create' do
       body: attributes_for(:post)[:body],
       author_nickname: user.nickname,
       id: be > 0,
-      published_at: %r{^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.*}
+      published_at: %r{^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.*}
     )
   end
 
@@ -35,7 +35,7 @@ describe 'Posts API::V1 POST /create' do
     it 'return json with custom published_at' do
       subject
       expect(response.body).to include_json(
-          published_at: %r{^1987-12-19T\d{2}:\d{2}:\d{2}.*}
+          published_at: %r{^1987-12-19 \d{2}:\d{2}:\d{2}.*}
         )
     end
   end

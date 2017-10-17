@@ -14,7 +14,7 @@ describe 'Posts API::V1 GET /show' do
       body: post.body,
       author_nickname: user.nickname,
       id: post.id,
-      published_at: %r{^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.*}
+      published_at: %r{^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.*}
     )
   end
 
