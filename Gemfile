@@ -17,6 +17,7 @@ group :development do
   gem 'spring', require: false
   gem 'spring-watcher-listen', '~> 2.0.0', require: false
   gem 'web-console', '>= 3.3.0'
+  gem 'letter_opener'
 end
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise'
