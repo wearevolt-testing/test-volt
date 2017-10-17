@@ -65,3 +65,4 @@ gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-i18n'
 gem 'mini_magick'
 gem 'fog', group: :production
+gem 'delayed_job_active_record'
