@@ -1,0 +1,7 @@
+ru:
+  service:
+    create_report:
+      errors:
+        messages:
+          invalid_params: 'Невозможно сформировать отчет, ошибка в параметрах запроса!'
+          generation_started: 'Report generation started'
