@@ -4,5 +4,28 @@
 <h4> <%= @user.nickname %> </h4>
 <p>Email: <%= @user.email if @user.email %></p>
 
-<%= link_to "edit", edit_user_registration_path, class: "btn btn-primary" %>
-<%= link_to "exit", destroy_user_session_path, class: "btn btn-danger", method: :delete %>
+<% if @user == current_user %>
+  <%= link_to "edit", edit_user_registration_path, class: "btn btn-primary" %>
+  <%= link_to "exit", destroy_user_session_path, class: "btn btn-danger", method: :delete %>
+<% end %>
+
+<p>Posts: <%= @user.posts.count %> </p>
+<ul>
+  <% @user.posts.each do |post| %>
+    <li>
+      <p> <%= post.title %> </p>
+      <p> <%= post.body %> </p>
+      <p> Date: <%= post.published_at.to_date %> </p>
+    </li>
+  <% end %>
+</ul>
+
+<p>Comments: <%= @user.comments.count %> </p>
+<ul>
+  <% @user.comments.each do |comment| %>
+    <li>
+      <p> <%= comment.body %> </p>
+      <p> Date: <%= comment.published_at.to_date %> </p>
+    </li>
+  <% end %>
+</ul>
