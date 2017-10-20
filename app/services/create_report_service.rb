@@ -24,7 +24,7 @@ class CreateReportService
   end
 
   def by_author
-    ReportMailer.by_author_email(context_params[:email]).deliver_later
+    ReportMailer.by_author_email(context_params).deliver_later
   end
 
   def validation_params

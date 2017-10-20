@@ -26,6 +26,6 @@ end
 
 Post.all.each do |p|
   text = Faker::Lovecraft.paragraph
-  User.order("RANDOM()").first.comments.create commentable: p, body: text
+  User.order("RANDOM()").first.comments.create commentable: p, body: text, published_at: p.published_at.to_date + rand(10)
   puts 'CREATED COMMETS'
 end

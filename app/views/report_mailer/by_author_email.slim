@@ -4,5 +4,15 @@ html
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
   body
     h1 Ваш Отчет!
-
-    
+    table
+      thead
+        tr
+          th email
+          th posts
+          th comments
+      tbody
+        - @users.each do |user|
+          tr
+            td= user.email
+            td= user.posts.where(published_at: @date_range).count
+            td= user.comments.where(published_at: @date_range).count
